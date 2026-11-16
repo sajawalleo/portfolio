@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sajawal Dastagir · Portfolio</title>
+<meta name="description" content="Sajawal Dastagir: E-commerce & Shopify Specialist. AI-assisted product operations, 400+ Shopify products uploaded per day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f9f8; --surface: #ffffff; --ink: #11201f; --muted: #4f5f5d; --line: #e2e9e7;
+    --brand: #0f766e; --brand-deep: #0f3d3e; --brand-soft: #e6f4f1;
+    --shadow: 0 1px 2px rgba(16,32,31,.06), 0 8px 24px rgba(16,32,31,.06);
+    --gutter: clamp(16px, 4vw, 32px);
+    --fs-sm: clamp(0.875rem, 0.85rem + 0.12vw, 0.95rem);
+    --fs-body: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+    --fs-lead: clamp(1.125rem, 1rem + 0.6vw, 1.375rem);
+    --fs-h3: clamp(1.15rem, 1.05rem + 0.5vw, 1.4rem);
+    --fs-h2: clamp(1.85rem, 1.4rem + 2vw, 2.85rem);
+    --fs-h1: clamp(2.35rem, 1.5rem + 4.2vw, 4.5rem);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b1514; --surface: #12201f; --ink: #e8f1ef; --muted: #a9bcb8; --line: #22312f;
+      --brand: #2dd4bf; --brand-deep: #99f6e4; --brand-soft: #123331; --shadow: 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b1514; --surface: #12201f; --ink: #e8f1ef; --muted: #a9bcb8; --line: #22312f;
+    --brand: #2dd4bf; --brand-deep: #99f6e4; --brand-soft: #123331; --shadow: 0 8px 24px rgba(0,0,0,.35);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+  body { font-family: Inter, system-ui, sans-serif; font-size: var(--fs-body); background: var(--bg); color: var(--ink); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; }
+  img { max-width: 100%; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 var(--gutter); }
+
+  nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; min-height: 72px; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 1.1rem; text-decoration: none; }
+  .logo span.m { width: 40px; height: 40px; border-radius: 10px; background: var(--brand-deep); color: var(--bg); display: grid; place-items: center; font-size: 1rem; }
+  .links { display: flex; gap: 6px; margin-left: auto; font-size: 1rem; font-weight: 500; }
+  .links a { text-decoration: none; color: var(--muted); padding: 10px 14px; border-radius: 8px; }
+  .links a:hover { color: var(--ink); background: var(--brand-soft); }
+  .icon-btn { border: 1px solid var(--line); background: var(--surface); color: var(--ink); width: 44px; height: 44px; border-radius: 10px; cursor: pointer; font-size: 1.15rem; flex: none; }
+  .menu-btn { display: none; }
+
+  .hero { padding: clamp(48px, 9vw, 104px) var(--gutter) clamp(40px, 6vw, 72px); }
+  .eyebrow { display: inline-flex; align-items: center; gap: 10px; background: var(--brand-soft); color: var(--brand); font-weight: 600; font-size: var(--fs-sm); padding: 8px 14px; border-radius: 999px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.2); flex: none; }
+  h1 { font-size: var(--fs-h1); line-height: 1.04; letter-spacing: -.035em; margin: 22px 0 20px; font-weight: 800; }
+  h1 em { font-style: normal; color: var(--brand); }
+  .lead { font-size: var(--fs-lead); color: var(--muted); max-width: 40ch; max-width: 680px; line-height: 1.6; }
+  .lead b { color: var(--ink); }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 52px; padding: 14px 24px; border-radius: 12px; font-weight: 600; font-size: 1.05rem; text-decoration: none; border: 1px solid var(--line); background: var(--surface); transition: transform .15s; }
+  .btn.primary { background: var(--brand-deep); color: var(--bg); border-color: transparent; }
+  .btn:hover { transform: translateY(-2px); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(12px, 2vw, 20px); margin-top: clamp(40px, 6vw, 64px); }
+  .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: clamp(18px, 2.4vw, 28px); box-shadow: var(--shadow); }
+  .stat b { display: block; font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem); line-height: 1.15; letter-spacing: -.02em; color: var(--brand-deep); }
+  .stat span { color: var(--muted); font-size: var(--fs-sm); display: block; margin-top: 4px; }
+
+  section { padding: clamp(48px, 8vw, 96px) 0; }
+  .sec-head { margin-bottom: clamp(28px, 4vw, 44px); }
+  .sec-head small { color: var(--brand); font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: 0.85rem; }
+  h2 { font-size: var(--fs-h2); letter-spacing: -.025em; line-height: 1.12; margin-top: 8px; }
+  .sec-head p { color: var(--muted); margin-top: 12px; max-width: 62ch; font-size: var(--fs-lead); }
+
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 56px; }
+  .sk { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: baseline; }
+  .sk b { font-size: 1.1rem; font-weight: 600; }
+  .sk .lvl { font-size: var(--fs-sm); color: var(--brand); font-weight: 600; }
+  .track { grid-column: 1 / -1; height: 10px; background: var(--line); border-radius: 99px; overflow: hidden; }
+  .fill { height: 100%; background: linear-gradient(90deg, var(--brand), #2bb5a0); border-radius: 99px; }
+
+  .job { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: clamp(22px, 3.5vw, 40px); box-shadow: var(--shadow); }
+  .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
+  .job h3 { font-size: var(--fs-h3); line-height: 1.3; }
+  .job .co { color: var(--brand); font-weight: 600; margin-top: 4px; }
+  .when { color: var(--muted); font-size: var(--fs-sm); font-weight: 500; background: var(--brand-soft); padding: 4px 12px; border-radius: 999px; height: fit-content; }
+  .job ul { margin: 20px 0 0 22px; display: grid; gap: 10px; }
+  .job li::marker { color: var(--brand); }
+
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .step { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; }
+  .step i { font-style: normal; display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 10px; background: var(--brand-soft); color: var(--brand); font-weight: 700; font-size: 1rem; }
+  .step h4 { margin: 14px 0 6px; font-size: 1.15rem; }
+  .step p { color: var(--muted); font-size: var(--fs-sm); line-height: 1.55; }
+
+  .work { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(18px, 2.5vw, 28px); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .card .shot { aspect-ratio: 16 / 10; overflow: hidden; background: #e9eeed; cursor: zoom-in; border-bottom: 1px solid var(--line); }
+  .card img { width: 100%; height: 100%; object-fit: cover; object-position: top left; transition: transform .4s; display: block; }
+  .card:hover img { transform: scale(1.03); }
+  .card .body { padding: clamp(20px, 2.5vw, 28px); display: flex; flex-direction: column; gap: 10px; flex: 1; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag { font-size: 0.82rem; background: var(--brand-soft); color: var(--brand); padding: 4px 10px; border-radius: 7px; font-weight: 600; }
+  .card h3 { font-size: var(--fs-h3); line-height: 1.3; }
+  .card p { color: var(--muted); }
+  .dl { margin-top: auto; padding-top: 8px; display: flex; flex-wrap: wrap; gap: 16px; font-weight: 600; }
+  .dl a { color: var(--brand); text-decoration: none; padding: 6px 0; }
+  .dl a:hover { text-decoration: underline; }
+  .disclaimer { margin-top: 24px; font-size: var(--fs-sm); color: var(--muted); max-width: 80ch; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 12px; }
+  .chip { background: var(--surface); border: 1px solid var(--line); padding: 10px 18px; border-radius: 12px; font-weight: 500; font-size: 1rem; }
+
+  .three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .box { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: clamp(22px, 3vw, 32px); }
+  .box h3 { font-size: var(--fs-h3); margin-bottom: 14px; }
+  .box p, .box li { color: var(--muted); }
+  .box b { color: var(--ink); }
+  .box ul { list-style: none; display: grid; gap: 8px; }
+
+  .contact { background: var(--brand-deep); color: var(--bg); border-radius: 28px; padding: clamp(36px, 6vw, 72px) clamp(20px, 5vw, 64px); text-align: center; }
+  .contact h2 { color: var(--bg); }
+  .contact p { opacity: .88; margin: 14px auto 30px; max-width: 56ch; font-size: var(--fs-lead); }
+  .contact .btn { background: var(--bg); color: var(--brand-deep); border: 0; }
+  .contact .btn.ghost { background: transparent; color: var(--bg); border: 1px solid color-mix(in srgb, var(--bg) 45%, transparent); }
+  .contact .cta { justify-content: center; }
+  footer { text-align: center; color: var(--muted); font-size: var(--fs-sm); padding: 40px var(--gutter) 48px; }
+
+  .lightbox { position: fixed; inset: 0; background: rgba(5,12,12,.9); display: none; place-items: center; z-index: 50; padding: 16px; cursor: zoom-out; }
+  .lightbox.on { display: grid; }
+  .lightbox img { max-width: 100%; max-height: 92vh; border-radius: 10px; box-shadow: 0 20px 60px rgba(0,0,0,.5); }
+
+  @media (max-width: 1024px) {
+    .flow { grid-template-columns: repeat(3, 1fr); }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 860px) {
+    .menu-btn { display: inline-block; margin-left: auto; }
+    .links { display: none; position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; gap: 0; padding: 8px var(--gutter) 16px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
+    .links.open { display: flex; }
+    .links a { padding: 14px 8px; font-size: 1.1rem; border-bottom: 1px solid var(--line); border-radius: 0; }
+    .three { grid-template-columns: 1fr; }
+    .work, .skills { grid-template-columns: 1fr; }
+    .flow { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    .flow { grid-template-columns: 1fr; }
+    .cta .btn { flex: 1 1 100%; }
+    .stat b { font-size: 1.9rem; }
+    .logo .name { display: none; }
+    .contact .btn { overflow-wrap: anywhere; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="m">SD</span><span class="name">Sajawal Dastagir</span></a>
+    <div class="links" id="links">
+      <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#work">Work Samples</a><a href="#contact">Contact</a>
+    </div>
+    <button class="icon-btn menu-btn" id="menu" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="icon-btn" id="theme" aria-label="Toggle dark mode">◐</button>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <span class="eyebrow"><span class="dot"></span>Open to visa-sponsored roles worldwide</span>
+  <h1>E-commerce &amp; Shopify Specialist.<br><em>AI-powered</em>, built for scale.</h1>
+  <p class="lead">I'm Sajawal, and I run high-volume Shopify catalogues. Using Claude, ChatGPT, Gemini and Python, I turn raw supplier data into polished, SEO-ready product listings: <b>400+ products every day</b>, with consistent quality.</p>
+  <div class="cta">
+    <a class="btn primary" href="files/Sajawal_Dastagir_CV.pdf" download>↓ Download CV</a>
+    <a class="btn" href="#work">View work samples</a>
+    <a class="btn" href="https://wa.me/923145665459" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>400+</b><span>Products uploaded per day</span></div>
+    <div class="stat"><b>2+ yrs</b><span>Shopify &amp; e-commerce experience</span></div>
+    <div class="stat"><b>3 AI tools</b><span>Claude · ChatGPT · Gemini</span></div>
+    <div class="stat"><b>4</b><span>Languages spoken</span></div>
+  </div>
+</header>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head"><small>Skills</small><h2>What I bring to your team</h2>
+      <p>Strongest in Shopify operations, AI-assisted content and spreadsheets, with practical Python for data collection.</p></div>
+    <div class="skills">
+      <div class="sk"><b>Shopify</b><span class="lvl">Expert</span><div class="track"><div class="fill" style="width:95%"></div></div></div>
+      <div class="sk"><b>AI Tools &amp; Prompting</b><span class="lvl">Expert</span><div class="track"><div class="fill" style="width:95%"></div></div></div>
+      <div class="sk"><b>Content Writing</b><span class="lvl">Expert</span><div class="track"><div class="fill" style="width:90%"></div></div></div>
+      <div class="sk"><b>HTML &amp; CSS</b><span class="lvl">Advanced</span><div class="track"><div class="fill" style="width:85%"></div></div></div>
+      <div class="sk"><b>Spreadsheets</b><span class="lvl">Advanced</span><div class="track"><div class="fill" style="width:85%"></div></div></div>
+      <div class="sk"><b>AI Image Generation</b><span class="lvl">Advanced</span><div class="track"><div class="fill" style="width:75%"></div></div></div>
+      <div class="sk"><b>Google Docs</b><span class="lvl">Advanced</span><div class="track"><div class="fill" style="width:75%"></div></div></div>
+      <div class="sk"><b>Python &amp; Web Scraping</b><span class="lvl">Intermediate</span><div class="track"><div class="fill" style="width:40%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head"><small>Experience</small><h2>Where I've been working</h2></div>
+    <div class="job">
+      <div class="job-top">
+        <div><h3>E-commerce &amp; Shopify Specialist (AI-Assisted Operations)</h3><div class="co">Linknbit · Rawalpindi, Pakistan</div></div>
+        <div class="when">Jul 2024 – Present</div>
+      </div>
+      <ul>
+        <li>Upload and manage <b>400+ Shopify products per day</b> via bulk CSV import, covering variants, SKUs, pricing, inventory, images and SEO.</li>
+        <li>Use Claude, ChatGPT and Gemini to write product titles, descriptions, tags and meta descriptions at scale.</li>
+        <li>Build Python scrapers (Requests, BeautifulSoup) that turn supplier websites into Shopify-ready CSV files.</li>
+        <li>Create client spreadsheets: product trackers, pricing sheets, QA checklists and progress reports.</li>
+        <li>Generate product and lifestyle images with ChatGPT and Gemini, and customise store pages with HTML &amp; CSS.</li>
+        <li>Run 2+ client projects in parallel while hitting daily targets.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><small>Process</small><h2>How I upload 400+ products a day</h2></div>
+    <div class="flow">
+      <div class="step"><i>1</i><h4>Collect</h4><p>Scrape supplier sites with Python or import supplier files.</p></div>
+      <div class="step"><i>2</i><h4>Clean</h4><p>Remove duplicates, fix prices, standardise sizes &amp; colours in Sheets.</p></div>
+      <div class="step"><i>3</i><h4>Enrich with AI</h4><p>Titles, descriptions, tags, SEO meta and images with Claude, ChatGPT &amp; Gemini.</p></div>
+      <div class="step"><i>4</i><h4>Import</h4><p>Map to the Shopify CSV template and bulk import.</p></div>
+      <div class="step"><i>5</i><h4>QA &amp; Report</h4><p>Spot-check the storefront, log the batch, update the client report.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head"><small>Work Samples</small><h2>Proof of skills</h2>
+      <p>Demo projects that recreate my daily workflow. Click any screenshot to enlarge it, or download the real files.</p></div>
+    <div class="work">
+      <article class="card">
+        <div class="shot"><img src="assets/shot-shopify-import.png" alt="Shopify bulk import CSV with 420 products" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Shopify</span><span class="tag">Bulk CSV</span><span class="tag">SEO</span></div>
+          <h3>Shopify Bulk Upload: 420 Products</h3>
+          <p>A complete Shopify import file for a home-décor store, with handles, variants, SKUs, pricing, inventory, image links and SEO titles, ready to import in one go.</p>
+          <div class="dl"><a href="files/01_Shopify_Bulk_Upload_Sample.xlsx" download>↓ Download .xlsx</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="assets/shot-upload-tracker.png" alt="Daily upload tracker spreadsheet" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Spreadsheets</span><span class="tag">Formulas</span><span class="tag">Reporting</span></div>
+          <h3>Daily Upload Tracker</h3>
+          <p>A 20-day production log of products uploaded, AI descriptions, images and errors fixed. It averages 430+ products per day, with live SUM, AVERAGE and QC formulas.</p>
+          <div class="dl"><a href="files/01_Shopify_Bulk_Upload_Sample.xlsx" download>↓ Download .xlsx</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="assets/shot-scraper-code.png" alt="Python BeautifulSoup scraper code and terminal output" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Python</span><span class="tag">BeautifulSoup</span><span class="tag">Automation</span></div>
+          <h3>Product Scraper → Shopify CSV</h3>
+          <p>A working Python scraper that collects title, price, stock, rating, category, description and image from a practice store, then writes a Shopify-ready CSV.</p>
+          <div class="dl"><a href="files/scraper.py" download>↓ scraper.py</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="assets/shot-scraped-data.png" alt="Scraped product data spreadsheet" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Data</span><span class="tag">Web Scraping</span></div>
+          <h3>Scraped Output: 60 Products</h3>
+          <p>The real output of the scraper above: clean, structured product data ready for review and import.</p>
+          <div class="dl"><a href="files/scraped_products.xlsx" download>↓ Download .xlsx</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="assets/shot-ai-content.png" alt="AI product descriptions spreadsheet" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">AI</span><span class="tag">Content Writing</span><span class="tag">Prompting</span></div>
+          <h3>AI Product Content: Before → After</h3>
+          <p>Messy supplier titles turned into optimised titles, descriptions and SEO meta, with length checks and a reusable prompt library for Claude, ChatGPT and Gemini.</p>
+          <div class="dl"><a href="files/03_AI_Product_Content_Sample.xlsx" download>↓ Download .xlsx</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="assets/shot-client-report.png" alt="Client KPI report spreadsheet" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Client Reporting</span><span class="tag">Conditional Formatting</span></div>
+          <h3>Weekly Client KPI Report</h3>
+          <p>Products live vs target, missing images and SEO, price updates and an automatic "catalogue health" score built with IF/AND formulas.</p>
+          <div class="dl"><a href="files/04_Client_Report_Dashboard_Sample.xlsx" download>↓ Download .xlsx</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot"><img src="assets/shot-sop-doc.png" alt="SOP document for AI-assisted Shopify upload" loading="lazy"></div>
+        <div class="body">
+          <div class="tags"><span class="tag">Google Docs</span><span class="tag">Documentation</span></div>
+          <h3>SOP: AI-Assisted Upload Workflow</h3>
+          <p>A step-by-step standard operating procedure covering tools, workflow, QA checklist and daily targets, written so a new team member can follow it.</p>
+          <div class="dl"><a href="files/05_SOP_AI_Shopify_Upload_Workflow.docx" download>↓ Download .docx</a></div>
+        </div>
+      </article>
+      <article class="card">
+        <div class="shot" style="cursor:default;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand-soft),var(--surface))">
+          <div style="text-align:center;padding:20px"><div style="font-size:44px;font-weight:800;color:var(--brand-deep)">&lt;/&gt;</div><div style="color:var(--muted);font-size:14px">This website</div></div>
+        </div>
+        <div class="body">
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div>
+          <h3>This Portfolio</h3>
+          <p>A hand-written HTML &amp; CSS site with a responsive layout, dark mode and an image lightbox. No page builder.</p>
+        </div>
+      </article>
+    </div>
+    <p class="disclaimer">Note: work samples use demo data so that client information stays confidential. The scraper uses books.toscrape.com, a public sandbox site made for scraping practice.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><small>Toolkit</small><h2>Tools I use every day</h2></div>
+    <div class="chips">
+      <span class="chip">Shopify Admin</span><span class="chip">Shopify Bulk CSV Import</span><span class="chip">Claude</span><span class="chip">ChatGPT</span>
+      <span class="chip">Gemini</span><span class="chip">Python</span><span class="chip">BeautifulSoup</span><span class="chip">Requests</span>
+      <span class="chip">Google Sheets</span><span class="chip">Microsoft Excel</span><span class="chip">Google Docs</span><span class="chip">HTML5</span><span class="chip">CSS3</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap three">
+    <div class="box"><h3>🎓 Education</h3>
+      <p><b>Diploma in Information Technology (DIT)</b><br>High Hope Institute · Oct 2024</p><br>
+      <p><b>Matriculation</b><br>BISE Rawalpindi · 2022</p></div>
+    <div class="box"><h3>🌐 Languages</h3>
+      <ul><li><b>Urdu</b>: Native</li><li><b>Punjabi</b>: Native</li><li><b>Pashto</b>: Native</li><li><b>English</b>: Intermediate</li></ul></div>
+    <div class="box"><h3>✈️ Availability</h3>
+      <ul><li><b>Nationality</b>: Pakistani</li><li><b>Relocation</b>: Ready to relocate worldwide</li><li><b>Visa</b>: Requires employer sponsorship</li><li><b>Type</b>: Full-time, on-site or hybrid</li></ul></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Let's work together</h2>
+      <p>Looking for someone who can keep a large Shopify catalogue fast, clean and SEO-ready? I'm ready to relocate and start.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:sajawalkh121@gmail.com">✉ sajawalkh121@gmail.com</a>
+        <a class="btn ghost" href="https://wa.me/923145665459" target="_blank" rel="noopener">WhatsApp +92 314 5665459</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/sajawal-khan-b0b693435/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Sajawal Dastagir · Rawalpindi, Pakistan</footer>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script>
+  const root = document.documentElement;
+  try { const t = localStorage.getItem('theme'); if (t) root.dataset.theme = t; } catch (e) {}
+  document.getElementById('theme').onclick = () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = dark ? 'light' : 'dark';
+    try { localStorage.setItem('theme', root.dataset.theme); } catch (e) {}
+  };
+  const menu = document.getElementById('menu'), links = document.getElementById('links');
+  menu.onclick = () => { const o = links.classList.toggle('open'); menu.setAttribute('aria-expanded', o); menu.textContent = o ? '✕' : '☰'; };
+  links.querySelectorAll('a').forEach(a => a.onclick = () => { links.classList.remove('open'); menu.textContent = '☰'; menu.setAttribute('aria-expanded', false); });
+  const lb = document.getElementById('lb');
+  document.querySelectorAll('.card .shot img').forEach(img => img.onclick = () => { lb.querySelector('img').src = img.src; lb.classList.add('on'); });
+  lb.onclick = () => lb.classList.remove('on');
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('on'); });
+</script>
+</body>
+</html>
