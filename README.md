@@ -12,7 +12,7 @@ Personal portfolio website showing my skills, experience and work samples: Shopi
 
 | Work sample | Skills |
 |---|---|
-| Shopify bulk upload file (420 products) | Shopify, CSV import, SEO |
+| Shopify bulk upload file (420 products) | Shopify, CSV import |
 | Daily upload tracker | Google Sheets / Excel, formulas |
 | Python product scraper → Shopify CSV | Python, Requests, BeautifulSoup |
 | AI product content (before → after) + prompt library | Claude, ChatGPT, Gemini, content writing |
@@ -29,6 +29,5 @@ Plain **HTML & CSS** (no page builder): responsive layout, dark mode and an imag
 
 - ✉️ sajawalkh121@gmail.com
 - 💬 WhatsApp: +92 314 5665459
-- 💼 [LinkedIn](https://www.linkedin.com/in/sajawal-khan-b0b693435/)
+- 💼 [LinkedIn](https://www.linkedin.com/in/sajawal-dastagir-b0b693435/)
 
-Open to full-time, visa-sponsored roles worldwide.
