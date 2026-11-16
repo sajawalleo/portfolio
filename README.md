@@ -4,7 +4,7 @@
 
 Personal portfolio website showing my skills, experience and work samples: Shopify bulk uploads (400+ products/day), AI product content (Claude, ChatGPT, Gemini), Python web scraping and client spreadsheets.
 
-🔗 **Live site:** _coming soon_
+🔗 **Live site:** https://sajawal-dastagir.vercel.app
 
 ![Portfolio preview](assets/shot-upload-tracker.png)
 
